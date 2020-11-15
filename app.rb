@@ -9,14 +9,15 @@ get '/' do
 end
 
 post '/info' do
-  session[:name] = params[:name]
+  session[:fname] = params[:fname]
   session[:day] = (params[:day]).to_i
   session[:month] = (params[:month]).to_i
   redirect '/birthdayeval'
 end
 
 get '/birthdayeval' do
-  user = User.new(session[:name],session[:day],session[:month])
+  user = User.new(session[:fname],session[:day],session[:month])
+  @name = user.name
   @days = user.birthday
   erb(:birthday)
 
