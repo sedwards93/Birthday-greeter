@@ -18,14 +18,13 @@ describe User do
       expect(subject.month).to eq("December")
     end
 
-    it 'instances of User class are initialized the day today' do
-      expect(subject.day_now).to eq(Date.today.strftime("%e"))
-    end
+    # it 'instances of User class are initialized the day today' do
+    #   expect(subject.day_now).to eq(Date.today.strftime("%e"))
+    # end
 
-    it 'instances of User class are initialized the month today' do
-      expect(subject.month_now).to eq(Date.today.strftime("%B"))
-    end
-
+    # it 'instances of User class are initialized the month today' do
+    #   expect(subject.month_now).to eq(Date.today.strftime("%B"))
+    # end
 
   end
 
